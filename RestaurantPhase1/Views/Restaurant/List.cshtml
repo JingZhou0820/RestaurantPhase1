@@ -12,14 +12,16 @@
         <div class="row" style="margin-top:100px">
             <div class="col-md-7" style="padding-left:120px" >
                 <a href="#">
+                    <br/>
                     <img class="img-responsive" src="~/assets/RestaurantsPicture/@item.Image1" alt="">
                 </a>
             </div>
-            <div class="col-md-5">
-                <h3>Restaurant Name: @item.Name.ToUpperInvariant()</h3>
-                <h4>Address: @item.Area  ,  @item.City</h4>
-                <h4>Type: @item.Type</h4>
-                <p>Description: @item.Description</p>
+            <div class="col-md-5" style="font-family:Arial">
+                <h3> @item.Name.First().ToString().ToUpper()@item.Name.Substring(1)</h3>
+                <h4 style="color:gray">Area: @item.Area.First().ToString().ToUpper()@item.Area.Substring(1)  , 
+                 @item.City.First().ToString().ToUpper()@item.City.Substring(1)</h4>
+                <h4 style="color:gray">Type: @item.Type.First().ToString().ToUpper()@item.Type.Substring(1)</h4>
+                <p style="color:gray">Description: @item.Description</p>
                 <a class="btn btn-primary" href="#">View Detail/Menus <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
