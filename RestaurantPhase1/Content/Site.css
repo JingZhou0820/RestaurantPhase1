@@ -6,7 +6,7 @@
  background-position:center;
  background-repeat:no-repeat;
  min-height:640px;
- min-width:1268px;
+ min-width:1260px;
 }
 /*Reset the previous padding 15px in container*/
 .container {
@@ -189,38 +189,4 @@ h6 {
 .banner-social-buttons {
     float: right;
     margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-}
-
-
-
-p.copyright {
-    margin: 15px 0 0;
-}
-.jumbotron {
-margin-bottom:0px
 }

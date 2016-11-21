@@ -8,6 +8,12 @@ namespace RestaurantPhase1.Models
 
     public partial class Restaurant
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Restaurant()
+        {
+            Categories = new HashSet<Category>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RestaurantId { get; set; }
 
@@ -28,9 +34,9 @@ namespace RestaurantPhase1.Models
         public string Type { get; set; }
 
         [Required]
-        [StringLength(50)]
         public string Description { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Image1 { get; set; }
 
@@ -42,5 +48,8 @@ namespace RestaurantPhase1.Models
 
         [StringLength(50)]
         public string Image4 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Category> Categories { get; set; }
     }
 }
